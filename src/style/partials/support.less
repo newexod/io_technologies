@@ -1,0 +1,120 @@
+@import "variables";
+
+.support {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40vw;
+  &-company {
+    display: flex;
+    margin-bottom: 95px;
+    &-logo {
+      width: 75px;
+      height: 55px;
+    }
+    &-name {
+      margin-left: 15px;
+      margin-top: -10px;
+      font-family: museo_sans_cyrl300;
+      font-size: 50px;
+      line-height: 82px;
+      color: #aec1e5;
+    }
+  }
+  &-heading {
+    margin-bottom: 40px;
+    font-family: helvetica_neue_light;
+    font-size: 36px;
+    line-height: 54px;
+    color: @white;
+  }
+  &-btns {
+    color: @white;
+    span {
+      margin: 0 25px;
+    }
+    a {
+      padding: 25px 42px;
+      font-size: 24px;
+      line-height: 54px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #ffffff;
+      background-color: @main-color;
+      border-radius: 12px;
+      color: @white;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1347px) {
+  .support {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1119px) {
+  .support {
+    width: 76vw;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    &-heading {
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 708px) {
+  .support {
+    &-btns {
+      a {
+        padding: 25px;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 619px) {
+  .support {
+    width: 100vw;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 619px) {
+  .support {
+    margin-top: 75px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 470px) {
+  .support {
+    &-btns {
+      span {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 420px) {
+  .support {
+    &-btns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      span {
+        margin: 20px 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 393px) {
+  .support {
+    &-company {
+      &-name {
+        font-size: 37px;
+      }
+    }
+  }
+}

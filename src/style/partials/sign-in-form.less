@@ -1,0 +1,260 @@
+@import "variables";
+
+.sign-in,
+.forgot-pass {
+  &-form {
+    width: 26vw;    
+    &-title {
+      margin-bottom: 35px;
+      font-family: helvetica_neue_medium;
+      font-size: 64px;
+      color: @white;
+    }
+    &-text {
+      font-size: 32px;
+      line-height: 48px;
+      color: @form-text;
+    }
+    form {
+      margin: 45px 0 65px;
+      input,
+      button {
+        outline: none;
+        border: none;
+      }
+      input {
+        width: 100%;
+        padding: 40px 0;
+        font-family: helvetica_neue_medium;
+        font-size: 34px;
+        line-height: 48px;
+        background-color: transparent;
+        color: @white;
+        border-bottom: 2px solid @border-bottom;
+        &::placeholder {
+          color: @form-text;
+        }
+        &.error {
+          border-color: @error-border;
+        }
+      }
+      div {
+        position: relative;
+        span {
+          position: absolute;
+          left: 570px;
+          bottom: 5px;
+          display: none;
+          width: 280px;
+          padding: 20px;
+          font-size: 28px;
+          background-color: @error-bg-msg;
+          color: @error-color-msg;
+          border-radius: 12px;
+          z-index: 1060;
+          &::before {
+            content: '';
+            position: absolute;
+            top: 35px;
+            left: -40px;
+            border: 20px solid transparent;	
+            border-right: 20px solid @error-bg-msg;
+          }
+        }
+      }
+      button {
+        cursor: pointer;
+      }
+      #email {
+        &:focus {
+          border-color: @active-email;
+          caret-color: @active-email;
+        }
+      }
+      #password {
+        margin-top: 45px;
+        &:focus {
+          border-color: @active-pass;
+          caret-color: @active-pass;       
+        }
+      }
+      button {
+        position: relative;
+        margin-top: 65px;
+        padding: 30px 235px;
+        font-size: 26px;
+        line-height: 56px;
+        text-transform: uppercase;
+        border-radius: 12px;
+        background: linear-gradient(to right, rgba(18,106,213,1) 0%, rgba(30,122,213,1) 42%, rgba(63,155,216,1) 71%, rgba(72,164,217,1) 100%);
+        color: @white;
+        &::after {
+          content: '';
+          position: absolute;
+          top: 45px;
+          right: 190px;
+          width: 30px;
+          height: 22px;
+          background: url('../../img/right-arrow.png');
+        }
+      }
+    }
+    &-forgot {
+      color: @form-text;
+      a {
+        text-decoration: none;
+        color: #3a91e2;
+      }
+    }
+  }
+}
+
+@media (min-width: 1710px) and (max-width: 2146px) {
+  .sign-in {
+    &-form {
+      form {
+        div {
+          span {
+            left: 410px;
+            width: 160px;
+            padding: 10px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1684px) and (max-width: 2146px) {
+  .sign-in {
+    &-form {
+      form {
+        input {
+          width: 430px;
+        }
+        button {
+          padding: 30px 170px;
+          &::after {
+            right: 130px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1428px) and (max-width: 1683px) {
+  .sign-in {
+    &-form {
+      width: 31vw;
+      form {
+        input {
+          width: 100%;
+        }
+        button {
+          padding: 30px 170px;
+          &::after {
+            right: 130px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1120px) and (max-width: 1427px) {
+  .sign-in {
+    &-form {
+      width: 43vw;
+      form {
+        button {
+          padding: 30px 100px;
+          &::after {
+            right: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1119px) {
+  .sign-in {
+    &-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 76vw;
+      &-text,
+      &-forgot {
+        color: @white;
+      }
+      form {
+        input {
+          &::placeholder {
+            color: @white;
+          }
+        }
+      }
+      &-forgot {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 734px) {
+  .sign-in {
+    &-form {
+      form {
+        button {
+          padding: 30px 170px;
+          &::after {
+            right: 130px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 734px) {
+  .sign-in {
+    &-form {
+      width: 100vw;
+      &-text {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 437px) {
+  .sign-in {
+    &-form {
+      &-title {
+        font-size: 45px;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 428px) {
+  .sign-in {
+    &-form {
+      form {
+        text-align: center;
+        button {
+          padding: 30px 100px;
+          &::after {
+            right: 60px;
+          }
+        }
+      }
+      &-forgot {
+        text-align: center;
+      }
+    }
+  }
+}
